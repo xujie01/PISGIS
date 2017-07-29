@@ -1,0 +1,47 @@
+<div>
+  <div style="border-bottom:1px solid #e5e6e6;max-height: 200px;overflow: auto">
+    <div data-dojo-attach-point="topDiv" style="display:inline-block;width:calc(100% - 70px)">
+    </div>
+      <img data-dojo-attach-point="imgDiv" data-dojo-attach-event="onClick:imgMoreClick" alt="image" title="${nls.seeimg}" style="width: 64px;height: 64px;cursor: pointer; display: none"/>
+  </div>
+    <div data-dojo-attach-point="contentDiv" style="display: none" class="draw-item">
+    </div>
+    <div data-dojo-attach-point="iwFooterContainer" style="display: none" class="iwFooterContainer">
+        <div data-dojo-attach-point="iwToolBarDiv" class="iwToolBar" style="height: 20px;">
+            <div data-dojo-attach-point="endBtn" style="display: none" class="button" data-dojo-attach-event="onClick:endButtonClick">
+                <div class="startIcon"></div>
+                <span class="set-end-text iw-g-font">${nls.endpoint}</span></div>
+            <div data-dojo-attach-point="startBtn" style="display: none" class="button" data-dojo-attach-event="onClick:startButtonClick">
+                <div class="endIcon"></div>
+                <span class="set-start-text iw-g-font">${nls.startpoint}</span></div>
+            <div data-dojo-attach-point="searchBtn" style="display: none" class="button" data-dojo-attach-event="onClick:searchButtonClick">
+                <div class="searchIcon"></div>
+                <span class="set-search-text iw-g-font">${nls.isearch}</span></div>
+            <div class="iwToolBarTabContainer" style="height: auto;">
+                <div class="setStart"><input class="textInput" id="endInput" autocomplete="off" placeholder="${nls.inputend}">
+                    <div class="btnInput" data-dojo-attach-event="onClick:startCarClick">${nls.car}</div>
+                    <div class="btnInput" data-dojo-attach-event="onClick:startBusClick">${nls.bus}</div>
+                </div>
+                <div class="setEnd"><input class="textInput" id="startInput" autocomplete="off" placeholder="${nls.inputstart}">
+                    <div class="btnInput" data-dojo-attach-event="onClick:endCarClick">${nls.car}</div>
+                    <div class="btnInput" data-dojo-attach-event="onClick:endBusClick">${nls.bus}</div>
+                </div>
+                <div class="SetSearch">
+                    <div>
+                        <div class="textLabel">${nls.type}：</div>
+                        <select class="classInput" data-dojo-attach-point="classSelect" data-dojo-type="dijit/form/Select"></select>
+                    </div>
+                    <div style="float: left;margin-top: 5px;">
+                        <div class="textLabel">${nls.radius}：</div>
+                        <input class="textInput" data-dojo-attach-point="radiusInput" value="500" style="width: 105px;">
+                        <div class="textLabel">(m)</div>
+                        <div class="btnInput" data-dojo-attach-event="onClick:_searchAround">${nls.search}</div>
+                    </div>
+                </div>
+                <div id="uiSuggestWrapUl"
+                     style="height: auto; width: 225px; display: none; background-color: rgb(255, 253, 245);">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

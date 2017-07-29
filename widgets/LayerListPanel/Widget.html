@@ -1,0 +1,45 @@
+<div>
+    <div data-dojo-attach-point="LayerlistPanel">
+        <nav class="classify-box">
+            <ul class="classify">
+                <li data-dojo-attach-point="specialNavLI" class="classify-list active">
+                    <div data-dojo-attach-point="specialNav" class="specialNav active" title="${nls.theme}"></div>
+                </li>
+                <li data-dojo-attach-point="layerNavLI" class="classify-list">
+                    <div data-dojo-attach-point="layerNav" class="layerNav" title="${nls.catalog}"></div>
+                </li>
+                <li data-dojo-attach-point="queryNavLI" class="classify-list">
+                    <div data-dojo-attach-point="queryNav" class="queryNav" title="${nls.query}"></div>
+                </li>
+                <!-- <li class="classify-list collection"><div class="collectionNav"></div></li> -->
+            </ul>
+        </nav>
+        <div data-dojo-attach-point="thamaticContent" class="thamaticContent">
+            <div class="desc-header">${nls.theme}</div>
+            <div data-dojo-attach-point="specialsMapDiv" class="specialsMap"></div>
+        </div>
+        <div class="layers-section" style="display: none" data-dojo-attach-point="layersSection">
+            <div class="layer-list-title">${nls.titleLayers}</div>
+            <div class="layer-list-body" data-dojo-attach-point="layerListBody">
+            </div>
+        </div>
+        <div class="query-section" style="display: none" data-dojo-attach-point="querySection">
+            <div class="layer-list-title">${nls.query}</div>
+            <div class="query-list-body" data-dojo-attach-point="queryListBody">
+                <div class="query-list-float" id="highQueryListFloat" data-dojo-attach-point="highQueryListFloat">
+                    <div data-dojo-attach-point="queryListFloatTitle" class="query-list-float-title">Title</div>
+                    <div class="brief-body">
+                        <div style="font-weight: bold;margin: 5px 0;">${nls.describetion}:</div>
+                        <div data-dojo-attach-point="queryListFloatDesc"></div>
+                        <div style="font-weight: bold;margin: 5px 0;">${nls.range}:</div>
+                        <div class="query-type" data-dojo-attach-point="queryType">
+                            <a href="javascript:void(0)" typecode="point" style="margin-right:5px;*margin-right:1px;">${nls.currentPoint}</a>
+                            <a href="javascript:void(0)" typecode="polyline" style="margin-right:5px;*margin-right:1px;">${nls.currentPolyline}</a>
+                            <a href="javascript:void(0)" typecode="polygon" style="margin-right:5px;*margin-right:1px;">${nls.currentRange}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

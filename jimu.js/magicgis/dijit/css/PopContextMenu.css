@@ -1,0 +1,77 @@
+.jimu-widget-popcontextmenu .boxinfo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.jimu-widget-popcontextmenu .boxinfo li {
+    width: 100%;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+.jimu-widget-popcontextmenu span{
+    float: left;
+    height: 16px;
+    width: 16px;
+    margin: 6px;
+    background-repeat: no-repeat;
+}
+.jimu-widget-popcontextmenu .map-info .info {
+    background-image: url(../../images/contextInfo.png);
+}
+.jimu-widget-popcontextmenu .map-info:hover .info {
+    background-image: url(../../images/contextInfo_h.png);
+}
+.jimu-widget-popcontextmenu .map-query .query {
+    background-image: url(../../images/contextQuery.png);
+}
+.jimu-widget-popcontextmenu .map-query:hover .query {
+    background-image: url(../../images/contextQuery_h.png);
+}
+.jimu-widget-popcontextmenu .map-location .location {
+    background-image: url(../../images/contextLocation.png);
+}
+.jimu-widget-popcontextmenu .map-location:hover .location {
+    background-image: url(../../images/contextLocation_h.png);
+}
+.jimu-widget-popcontextmenu .map-dlocation .dlocation {
+    background-image: url(../../images/contextDLocation.png);
+}
+.jimu-widget-popcontextmenu .map-dlocation:hover .dlocation {
+    background-image: url(../../images/contextDLocation_h.png);
+}
+.jimu-widget-popcontextmenu i {
+    float: left;
+    font-size: 12px;
+    font-style: normal;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+}
+.jimu-widget-popcontextmenu .map-info:hover i {
+    color: #579AFC;
+}
+.jimu-widget-popcontextmenu .map-query:hover i {
+    color: #579AFC;
+}
+.jimu-widget-popcontextmenu .map-location:hover i {
+    color: #579AFC;
+}
+.jimu-widget-popcontextmenu .map-dlocation:hover i {
+    color: #579AFC;
+}
+
+.jimu-widget-popcontextmenu :after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 43px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid #fff;
+    border-bottom: 0;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}

@@ -1,0 +1,28 @@
+{
+  "allPlaceholder": "",
+  "showInfoWindowOnSelect": false,
+  "sources":[
+    {
+      "layerId": "PisBaseMap_PILE1",
+      "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0",
+      "name": "美国城市",
+      "placeholder": "美国城市",
+      "searchFields": ["areaname"],
+      "displayField": "areaname",
+      "exactMatch": false,
+      "maxResults": 6,
+      "type": "query"
+    },
+    {
+      "layerId": "PisBaseMap_PILE2",
+      "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/2",
+      "name": "美国州",
+      "placeholder": "美国州名",
+      "searchFields": ["state_name"],
+      "displayField": "state_name",
+      "exactMatch": false,
+      "maxResults": 6,
+      "type": "query"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "displayCluster": true,
+  "showFeatureCount": true,
+  "featureCountLabel": "计数",
+  "summaryLayer": {
+    "fields": [
+      {
+        "type": "SUM",
+        "label": "",
+        "field": ""
+      }
+    ]
+  },
+  "refreshInterval": null
+}

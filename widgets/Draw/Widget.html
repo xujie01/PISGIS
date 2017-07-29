@@ -1,0 +1,80 @@
+<div>
+  <div class="jimu-widget-normal draw-widget-content">
+    <div class="draw-tab-header" data-dojo-attach-point="tabHeader" data-dojo-attach-event="onclick:_onTabHeaderClicked" >
+      <div class="draw-tab-item jimu-float-leading selected" data-dojo-attach-point="drawQueryItem">${nls.drawLabel}</div>
+      <div class="draw-tab-item jimu-float-trailing" data-dojo-attach-point="infoQueryItem">${nls.infoLabel}</div>
+    </div>
+    <div class="draw-tabs-container">
+      <div class="draw-tab-view draw-tab-view selected" data-dojo-attach-point="drawTabView">
+        <div>
+          <label>${nls.selectDrawMode}</label>
+          <div data-dojo-attach-point="drawBox" data-dojo-type="jimu/dijit/DrawBox" data-dojo-props='types:["point","polyline","polygon","text"],showClear:false' style="margin-top:5px;"></div>
+          <div data-dojo-attach-point="settingContent" style="width:100%;">
+            <div class="point-section" data-dojo-attach-point="pointSection">
+              <div data-dojo-attach-point="pointSymChooser" data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-props='type:"marker"'></div>
+            </div>
+
+            <div class="line-section" data-dojo-attach-point="lineSection">
+              <div data-dojo-attach-point="lineSymChooser" data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-props='type:"line"'></div>
+            </div>
+
+            <div class="polygon-section" data-dojo-attach-point="polygonSection">
+              <div data-dojo-attach-point="fillSymChooser" data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-props='type:"fill"'></div>
+            </div>
+
+            <div class="text-section" data-dojo-attach-point="textSection">
+              <div data-dojo-attach-point="textSymChooser" data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-props='type:"text"'></div>
+            </div>
+          </div>
+
+          <div data-dojo-attach-point="measureSection" class="measure-section">
+            <div style="margin-bottom:7px;">
+              <input data-dojo-attach-point="showMeasure" type="checkbox" />
+              <label data-dojo-attach-point="showMeasureLabel">${nls.showMeasurements}</label>
+            </div>
+            <div data-dojo-attach-point="areaMeasure" style="display:none;height:30px;margin-bottom:7px;">
+              <div class="area-units-tip  jimu-float-leading">${nls.areaUnits}</div>
+              <select data-dojo-attach-point="areaUnitSelect" data-dojo-type="dijit/form/Select" class=" jimu-float-trailing" style="width:50%;height:30px;"></select>
+            </div>
+            <div data-dojo-attach-point="distanceMeasure" style="display:none;height:30px;">
+              <div class="distance-units-tip jimu-float-leading">${nls.distanceUnits}</div>
+              <select data-dojo-attach-point="distanceUnitSelect" data-dojo-type="dijit/form/Select" class=" jimu-float-trailing" style="width:50%;height:30px;"></select>
+            </div>
+          </div>
+
+          <div class="operations" onselectstart="return false;" style="display:none;">
+            <div class="jimu-btn" data-dojo-attach-point="btnUndo" data-dojo-attach-event="onclick:_onBtnUndoClicked">${nls.undo}</div>
+            <div class="jimu-btn" data-dojo-attach-point="btnRedo" data-dojo-attach-event="onclick:_onBtnRedoClicked">${nls.redo}</div>
+            <div class="jimu-btn last-btn" data-dojo-attach-point="btnClear" data-dojo-attach-event="onclick:_onBtnClearClicked">${nls.clear}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="draw-tab-view info-tab-view" data-dojo-attach-point="infoTabView">
+        <div class="h_groupGrid"  data-dojo-attach-point="draw_groupGrid">
+          <div class="operations">
+            <div style="display: inline-block;vertical-align: middle;">
+                <img src="widgets/Draw/images/edit_delete.png" style="width: 16px;height: 16px;cursor: pointer"  data-dojo-attach-event="onclick:_onPopEditTip"/>
+            </div>
+            <div data-dojo-attach-point="saveBtn" data-dojo-attach-event="onclick:_onSaveEdit" class="operations-btn jimu-state-disabled">${nls.shapSave}</div>
+            <div data-dojo-attach-point="cancelBtn" data-dojo-attach-event="onclick:cancelEdit" class="operations-btn jimu-state-disabled">${nls.cancelLabel}</div>
+            <div class="operations-btn" data-dojo-attach-event="onclick:queryPlot">${nls.refresh}</div>
+            <div class="operations-btn" data-dojo-attach-event="onclick:_onClearClick">${nls.clearLabel}</div>
+          </div>
+          <div data-dojo-attach-point="gridDivNode" style="width: 100%;height:calc(100% - 30px)"></div>
+        </div>
+        <div data-dojo-type="dijit/Dialog" data-dojo-attach-point="deleteDialog" title=${nls.dialogTitle}>
+          <tr>
+            <td><label>${nls.dialogLabel}</label></td>
+          </tr>
+          <div class="dijitDialogPaneActionBar" style="width: 200px;">
+            <button data-dojo-type="dijit/form/Button" type="button"  data-dojo-attach-point="btnOk">${nls.okLabel}</button>
+            <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="btnCancel" >${nls.cancelLabel}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,75 @@
+<div style="background-color: #ffffff;border: 1px solid #cac3c3;">
+  <div style="border-bottom:1px solid #e5e6e6;">
+    <img src="jimu.js/magicgis/images/monitor/i1.png" style="width: 64px;height: 64px; display: inline-block"/>
+    <div style="display:inline-block;width:calc(100% - 70px)">
+      <div>
+        <div style="display:inline-block;font-weight: bold;">${nls.fullname}：</div>
+        <div style="display:inline-block;font-weight: bold;" data-dojo-attach-point="mUSERNAME"></div>
+      </div>
+      <div>
+        <div style="display:inline-block;">${nls.speed}：</div>
+        <div style="display:inline-block;" data-dojo-attach-point="mSPEED"></div>
+      </div>
+        <div>
+            <div style="display:inline-block;">${nls.phone}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mPHONE"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.battery}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mBATTERY"></div>
+        </div>
+    </div>
+  </div>
+    <div class="draw-item" data-geotype="NORMAL">
+        <div>
+            <div style="display:inline-block;">${nls.department}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mUNITNAME"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.persontype}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mUSERTYPE"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.devicetype}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mDEVTYPE"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.worktime}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mWORKTIME"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.positiontime}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mLOCATIONDATE"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.scope}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mSUBLOCATION"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.keypoints}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mALLPOINT"></div>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.seepoints}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="mOKPOINT"></div>
+        </div>
+    </div>
+    <div class="draw-item" data-geotype="SMS">
+        <div>${nls.smscontent}：</div>
+        <textarea style="width: 100%;height: 100px;" data-dojo-attach-point="mSMS"></textarea>
+    </div>
+    <div  class="draw-item" data-geotype="NORMAL" style="border-top:1px solid #e5e6e6; height: 28px;padding: 2px 2px;">
+        <input type="button" value="${nls.keypoint}" data-dojo-attach-event="onclick:_onKeyPointClick"
+               style="background:url(jimu.js/magicgis/images/monitor/k1.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px; border: solid #20d64a 2px;margin-left: 3px;"/>
+        <input type="button" value="${nls.trak}" data-dojo-attach-event="onclick:_onTrackClick"
+               style="background:url(jimu.js/magicgis/images/monitor/t1.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px; border: solid #20d64a 2px;;margin-left: 3px;"/>
+        <input type="button" value="${nls.sms}" data-dojo-attach-event="onclick:_onSMSClick"
+               style="background:url(jimu.js/magicgis/images/monitor/sms.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px;border: solid #20d64a 2px;;margin-left: 3px;"/>
+    </div>
+    <div  class="draw-item" data-geotype="SMS" style="border-top:1px solid #e5e6e6; height: 28px;padding: 2px 2px;">
+        <input type="button" value="${nls.ok}" data-dojo-attach-event="onclick:_onOkClick"
+               style="background:url(jimu.js/magicgis/images/monitor/ok.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px; border: solid #20d64a 2px;margin-left: 3px;"/>
+        <input type="button" value="${nls.back}" data-dojo-attach-event="onclick:_onBackClick"
+               style="background:url(jimu.js/magicgis/images/monitor/back.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px; border: solid #20d64a 2px;;margin-left: 3px;"/>
+        </div>
+</div>

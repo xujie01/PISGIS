@@ -1,0 +1,49 @@
+<div style="background-color: #ffffff;border: 1px solid #cac3c3;">
+  <div class="draw-item" data-geotype="NORMAL" style="border-bottom:1px solid #e5e6e6;">
+      <img src="jimu.js/magicgis/images/monitor/user_photo_n.png" style="width: 64px;height: 64px; display: inline-block"/>
+      <div style="display:inline-block;width:calc(100% - 70px)">
+          <div style="padding: 2px 0px;">
+              <div data-dojo-attach-point="personName" style="display:inline-block;font-weight: bold;"></div>
+              <img data-dojo-attach-point="playLine" style="width: 16px;height: 16px; float: right;cursor: pointer;" data-dojo-attach-event="onclick:_showLineClick"/>
+              <img src="jimu.js/magicgis/images/monitor/l1.png" data-dojo-attach-event="onclick:_onLocationClick" style="width: 16px;height: 16px; float: right;cursor: pointer;" title="定位"/>
+              <img src="jimu.js/magicgis/images/monitor/k1.png" data-dojo-attach-event="onclick:_onUserKeyPointClick" style="width: 16px;height: 16px; float: right;cursor: pointer;margin-left: 3px" title="关键点"/>
+          </div>
+          <div style="padding: 2px 0px;">
+              <div style="display:inline-block;">${nls.patrollen}：</div>
+              <div style="display:inline-block;" data-dojo-attach-point="personLength"></div>
+          </div>
+          <div style="padding: 2px 0px;">
+              <div style="display:inline-block;">${nls.spendtime}：</div>
+              <div style="display:inline-block;" data-dojo-attach-point="ginspectTimer"></div>
+          </div>
+          <div style="padding: 2px 0px;">
+              <div style="display:inline-block;">${nls.keypoints}：</div>
+              <div style="display:inline-block;" data-dojo-attach-point="getPoint"></div>
+          </div>
+      </div>
+  </div>
+    <div class="draw-item" data-geotype="PLAY" style="display:inline-block;width:100%;padding: 5px;background-color: #f4f8ff;">
+        <div>
+            <div data-dojo-attach-point="personNamePLAY" style="display:inline-block;font-weight: bold;"></div>
+            <img src="jimu.js/magicgis/images/monitor/arrow-back.png" data-dojo-attach-event="onclick:_onBackClick" style="width: 20px;height: 20px; float: right;cursor: pointer;" title="${nls.keypoint}"/>
+            <img src="jimu.js/magicgis/images/monitor/k1.png" data-dojo-attach-event="onclick:_onUserKeyPointClick" style="width: 16px;height: 16px; float: right;cursor: pointer;margin-left: 3px" title="${nls.back}"/>
+            <img src="jimu.js/magicgis/images/monitor/dc1.png" data-dojo-attach-event="onclick:_onShowLineDev" data-dojo-attach-point="devShowLine" style="width: 16px;height: 16px; float: right;cursor: pointer;" title="${nls.devicetrack}"/>
+            <img src="jimu.js/magicgis/images/monitor/dc2.png" data-dojo-attach-event="onclick:_onShowLineApp" data-dojo-attach-point="appShowLine" style="width: 16px;height: 16px; float: right;cursor: pointer;margin-left: 3px" title="${nls.apptrack}"/>
+        </div>
+        <div>
+            <div style="display:inline-block;">${nls.nowtime}：</div>
+            <div style="display:inline-block;" data-dojo-attach-point="sliderTimer"></div>
+        </div>
+        <div data-dojo-attach-point="sliderDiv"></div>
+        <div>
+            <img data-dojo-attach-point="play" src="jimu.js/magicgis/images/monitor/play.png" data-dojo-attach-event="onclick:_onStartPath" style="width: 24px;height: 24px; display:inline-block;cursor: pointer;" title="${nls.play}"/>
+            <img data-dojo-attach-point="pause" src="jimu.js/magicgis/images/monitor/pause_disabled.png" data-dojo-attach-event="onclick:_onPausePath" style="width: 24px;height: 24px; display:inline-block;cursor: pointer;" title="${nls.pause}"/>
+            <img data-dojo-attach-point="stop" src="jimu.js/magicgis/images/monitor/stop_disabled.png" data-dojo-attach-event="onclick:_onStopPath" style="width: 24px;height: 24px; display:inline-block;cursor: pointer;" title="${nls.stop}"/>
+            <input data-dojo-attach-point="playSpeed" data-dojo-type="dijit/form/NumberSpinner" style="width:57px;height:24px;float: right;"
+                   data-dojo-props='value:0,smallDelta:2,constraints:{min:-4,max:8},intermediateChanges:true'>
+            </input>
+            <div style="float: right;line-height: 24px;">${nls.speed}×：</div>
+        </div>
+    </div>
+    <div id="pathIcon" style="position: absolute;width: 10px; height: 10px; background-color: #FFFF00;z-index:99999;display:none"></div>
+</div>

@@ -1,0 +1,24 @@
+.jimu-widget-keypoints .buttonActionBar{
+    padding: 3px 0px 2px 0px;
+    width: 100%;
+    text-align: right;
+}
+.jimu-widget-keypoints .seeIcon{
+    background-image: url(../images/menu_see.gif);
+    width: 16px;
+    height: 16px;
+}
+.jimu-widget-keypoints .addIcon{
+    background-image: url(../images/menu_add.png);
+    width: 16px;
+    height: 16px;
+}
+.jimu-widget-keypoints .settingsIcon {
+    background-image: url(../images/settings.png);
+    width: 16px;
+    height: 16px;
+}
+.jimu-widget-keypoints {
+    width: 100%;
+}
+

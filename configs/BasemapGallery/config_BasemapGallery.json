@@ -1,0 +1,59 @@
+{
+  "basemapGallery": {
+    "basemaps": [{
+      "layers": [{
+        "type":"googlemap"
+      }],
+      "title": "谷歌地图",
+      "thumbnailUrl": "images/map.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    }, {
+      "layers": [{
+        "type":"googleimage"
+      }],
+      "title": "谷歌影像图",
+      "thumbnailUrl": "images/image.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    }, {
+      "layers": [{
+        "type":"googletrain"
+      }],
+      "title": "谷歌地形图",
+      "thumbnailUrl": "images/train.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    },{
+      "layers": [{
+        "type":"tianditumap"
+      }],
+      "title": "天地图地图",
+      "thumbnailUrl": "images/map.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    }, {
+      "layers": [{
+        "type":"tiandituimage"
+      }],
+      "title": "天地图影像",
+      "thumbnailUrl": "images/image.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    }, {
+      "layers": [{
+        "type":"tianditutrain"
+      }],
+      "title": "天地图地形",
+      "thumbnailUrl": "images/train.png",
+      "spatialReference": {
+        "wkid": "102100"
+      }
+    }]
+  }
+}

@@ -1,0 +1,153 @@
+<div style="background-color: #FFFFFF">
+    <div id="locationPanel" style="width: 100%;">
+        <table cellspacing="0" width="100%" style="margin: 5px 0px 0px 0px;border-collapse:separate; border-spacing:5px;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="display: none">
+                <td>
+                    <div  data-dojo-attach-point="classCheck" data-dojo-type="jimu/dijit/CheckBox" data-dojo-props='label:this.nls.classLabel'></div>
+                </td>
+                <td>
+                    <select data-dojo-attach-point="classSelect" data-dojo-type="dijit/form/Select" class="jimu-float-trailing" ></select>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align:middle;">
+                    <span>${nls.department}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="unitSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/UnitComboxDijit"
+                         data-dojo-props='languageType:"zh"' style="height:25px;"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.pipeline}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="lineloopSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/LineloopComboxDijit"
+                         data-dojo-props='languageType:"zh"' style="height:25px;"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.type}:</span>
+                </td>
+                <td>
+                    <ul data-dojo-attach-point="sitemarkerTypeDiv" class="ui-tab-navigator ui-tab-navigatorL">
+                        <li data-dojo-attach-point="markerTypeDiv" class="ui-tab-item ui-tab-item-active" data-key="marker"><span>${nls.inmarker}</span></li>
+                        <li data-dojo-attach-point="siteTypeDiv" class="ui-tab-item" data-key="site"><span>${nls.insite}</span></li>
+                    </ul>
+                    <ul data-dojo-attach-point="linepointTypeDiv" class="ui-tab-navigator  ui-tab-navigatorR">
+                        <li data-dojo-attach-point="pointTypeDiv" class="ui-tab-item ui-tab-item-active" data-key="point"><span>${nls.querypoint}</span></li>
+                        <li data-dojo-attach-point="lineTypeDiv" class="ui-tab-item" data-key="line"><span>${nls.queryline}</span></li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table data-dojo-attach-point="markerpointDiv"  cellspacing="0" width="100%" style="margin: -5px 0px 0px 0px;border-collapse:separate; border-spacing:5px;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.marker}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="markerSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/MarkerComboxDijit"
+                         data-dojo-props='languageType:"zh"' style="height:25px;"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table data-dojo-attach-point="markerlineDiv"  cellspacing="0" width="100%" style="margin: -5px 0px 0px 0px;border-collapse:separate; border-spacing:5px; display: none;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.beginmarker}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="beginMarkerSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/MarkerComboxDijit"
+                         data-dojo-props='languageType:"zh"' style="height:25px;"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.endmarker}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="endMarkerSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/MarkerComboxDijit"
+                         data-dojo-props='languageType:"zh"' style="height:25px;"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table data-dojo-attach-point="sitepointDiv"  cellspacing="0" width="100%" style="margin: -5px 0px 0px 0px;border-collapse:separate; border-spacing:5px; display: none;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.site}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="siteSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/SiteComboxDijit"
+                         style="height:25px;"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table data-dojo-attach-point="sitelineDiv"  cellspacing="0" width="100%" style="margin: -5px 0px 0px 0px;border-collapse:separate; border-spacing:5px; display: none;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.beginsite}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="beginSiteSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/SiteComboxDijit"
+                         style="height:25px;"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td>
+                    <span>${nls.endsite}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="endSiteSeclect" data-dojo-type="jimu/magicgis/dijit/PileDijit/SiteComboxDijit"
+                         style="height:25px;"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div style="width: 100%;text-align: right;padding-bottom: 5px;height: 34px;">
+            <!--<div class="location-icon" title="经纬度定位" data-dojo-attach-point="btnLocation" data-dojo-attach-event="onclick:_onLocaion"></div>-->
+            <button type="button" class="btn btn-default btn-sm" style="float: left;margin: 0 3px;" title="经纬度定位" data-dojo-attach-point="btnLocation" data-dojo-attach-event="onclick:_onLocaion">
+                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+            </button>
+            <div style="float: right" data-dojo-type="dijit/form/Button" data-dojo-attach-event="click:_onQueryBtnClick" data-dojo-props="busyLabel:'querying',iconClass:'seeIcon'">
+                ${nls.query}
+            </div>
+            <span style="display: none" class="btn32" title="${nls.rectquery}"> <img data-dojo-attach-point="btnRect" src="widgets/LocationQuery/images/recticon.png" data-dojo-attach-event="onclick:_onRectQuery"></span>
+            <span style="display:none " class="btn32" title="${nls.pointquery}"> <img data-dojo-attach-point="btnPoint" src="widgets/LocationQuery/images/pointicon.png" data-dojo-attach-event="onclick:_onPointQuery">  </span>
+        </div>
+    </div>
+    <div data-dojo-attach-point="settingContent"/>
+</div>

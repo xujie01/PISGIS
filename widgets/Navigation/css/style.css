@@ -1,0 +1,409 @@
+.jimu-widget-navigation .searchbox-content-common {
+    box-sizing: border-box;
+    width: 320px;
+    height: 38px;
+}
+
+.route-tabs {
+    position: relative;
+    border-bottom: 1px solid #A3C7FF;
+    color: #333;
+    text-decoration: none
+}
+
+.route-tabs .arrow-wrap {
+    top: 34px;
+    -webkit-transition: left .2s ease-in;
+    transition: left .2s ease-in;
+}
+
+.route-tabs .tab-item {
+    box-sizing: border-box;
+    font-size: 12px;
+    float: left;
+    width: 25%;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    cursor: pointer
+}
+
+.route-tabs .tab-item i {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    background-image: url(../images/route-icon.png);
+    background-repeat: no-repeat
+}
+
+.route-tabs .tab-item span {
+    margin-left: 8px
+}
+
+.route-tabs .tab-item:hover {
+    color: #3385ff
+}
+
+.route-tabs .tab-item.bus-tab i {
+    width: 13px;
+    height: 15px;
+    background-position: 0 -34px
+}
+
+.route-tabs .tab-item.drive-tab i {
+    width: 15px;
+    height: 14px;
+    background-position: 0 -68px
+}
+
+.route-tabs .tab-item.walk-tab i {
+    width: 15px;
+    height: 17px;
+    background-position: 0 -100px;
+    top: 3px
+}
+
+.route-tabs .tab-item.bike-tab i {
+    width: 18px;
+    height: 15px;
+    background-position: 0 -138px;
+    top: 3px
+}
+
+.arrow-wrap {
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    background: #fff;
+    border-top: 1px solid #A5C4FF;
+    border-left: 1px solid #A5C4FF;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand')";
+}
+
+/*hover及选中效果*/
+.route-searchbox-content.bus .arrow-wrap {
+    left: 12.5%;
+}
+
+.route-searchbox-content.bus .tab-item.bus-tab {
+    color: #3385ff
+}
+
+.route-searchbox-content.bus .tab-item.bus-tab i {
+    background-position: 0 -51px
+}
+
+.route-searchbox-content .tab-item.bus-tab:hover i {
+    background-position: 0 -51px
+}
+
+.route-searchbox-content.drive .arrow-wrap {
+    left: 37.5%
+}
+
+.route-searchbox-content.drive .tab-item.drive-tab {
+    color: #3385ff
+}
+
+.route-searchbox-content.drive .tab-item.drive-tab i {
+    background-position: 0 -84px
+}
+
+.route-searchbox-content .tab-item.drive-tab:hover i {
+    background-position: 0 -84px
+}
+
+.route-searchbox-content.walk .arrow-wrap {
+    left: 62.5%
+}
+
+.route-searchbox-content.walk .tab-item.walk-tab {
+    color: #3385ff
+}
+
+.route-searchbox-content.walk .tab-item.walk-tab i {
+    background-position: 0 -119px
+}
+
+.route-searchbox-content .tab-item.walk-tab:hover i {
+    background-position: 0 -119px
+}
+
+.route-searchbox-content.bike .arrow-wrap {
+    left: 87.5%
+}
+
+.route-searchbox-content.bike .tab-item.bike-tab {
+    color: #3385ff
+}
+
+.route-searchbox-content.bike .tab-item.bike-tab i {
+    background-position: 0 -157px
+}
+
+.route-searchbox-content .tab-item.bike-tab:hover i {
+    background-position: 0 -157px
+}
+
+.jimu-widget-navigation .input-clear {
+    cursor: pointer;
+    position: absolute;
+    width: 27px;
+    height: 38px;
+    top: 0;
+    background: url(../images/searchbox_f.png) no-repeat 0 -114px #fff;
+    display: none
+}
+
+.routebox {
+    -webkit-transition: max-height 1s ease-in;
+    transition: max-height 1s ease-in;
+}
+
+.routebox .routebox-content {
+    height: auto!important;
+    position: relative;
+}
+
+.routebox .routebox-content .routebox-inputs {
+    margin-left: 39px;
+    margin-right: 4px;
+}
+
+.routebox .routebox-content .routebox-input {
+    height: 40px;
+    width: 233px;
+    border-bottom: 1px solid #eaebed;
+    position: relative
+}
+
+.routebox .routebox-content .routebox-input:last-child {
+    border-bottom: 0
+}
+
+.routebox .routebox-content .routebox-input .input-clear {
+    left: auto;
+    right: 0px;
+    top: 1px
+}
+
+.routebox .routebox-content .routebox-input .route-input-icon {
+    width: 11px;
+    height: 10px;
+    background: url(../images/start_f.png) no-repeat 0 0;
+    position: absolute;
+    top: 15px;
+    left: 3px
+}
+
+.routebox .routebox-content .routebox-input.route-end .route-input-icon {
+    background: url(../images/end_f.png) no-repeat 0 0
+}
+
+.routebox .routebox-content .routebox-input input {
+    box-sizing: border-box;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    border-left: 20px solid transparent;
+    border-right: 27px solid transparent;
+    line-height: 20px
+}
+
+.routebox .routebox-content .routebox-revert {
+    width: 39px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer
+}
+
+.routebox .routebox-content .routebox-revert .routebox-revert-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 14px;
+    margin-left: -9px;
+    margin-top: -7px;
+    background: url(../images/revert.png) no-repeat 0 0
+}
+
+.route-submit {
+    background: #F5F7FA;
+    border: 1px solid #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: #999;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    width: 54px;
+}
+.route-submit:hover {
+    background-color: #3385ff;
+    color: #fff
+}
+
+.ui3-suggest-wrap {
+    position: absolute;
+    background-color: #fff;
+    border-top: 1px solid #E4E6E7;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+    border-radius: 0 0 2px 2px;
+}
+.pc .ui3-suggest-wrap {
+    font-family: Arial,Helvetica,"Microsoft YaHei",sans-serif;
+}
+#ui3-suggest-scroll {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ui3-suggest-wrap ul {
+    padding: 0px;
+    margin: 0px;
+}
+.ui3-suggest-wrap .ui3-suggest-item li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.ui3-suggest-wrap .ui3-suggest-item a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui3-suggest-wrap .ui3-suggest-item i.default {
+    background: url(../images/suggestion-icon.png) no-repeat 12px -12px;
+}
+.ui3-suggest-wrap .ui3-suggest-item i {
+    padding-left: 39px;
+    font-style: normal;
+    color: #666;
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+}
+.ui3-suggest-wrap .ui3-suggest-item em {
+    font-style: normal;
+}
+.ui3-suggest-item:hover a {
+    background-color: #EBEBEB;
+    cursor: pointer;
+    color: #666;
+}
+
+#nav_container {
+    position: absolute;
+    background-color: #fff;
+    /*top: 122px;*/
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+#navtrans_content .nav_routes {
+    overflow: hidden
+}
+.navtrans-navlist-view {
+    border: 1px solid #E4E6E7;
+    margin: 0 0 10px;
+    cursor: pointer;
+}
+.navtrans-navlist-title {
+    color: #666;
+    line-height: 22px;
+    padding: 25px 20px 10px;
+}
+.navtrans-navlist-view.expand .navtrans-navlist-title {
+    background: #EBF1FB
+}
+.navtrans-navlist-view.expand .navtrans-navlist-actions {
+    background: #EBF1FB
+}
+.navtrans-navlist-view.active .navtrans-navlist-title {
+    background: #EBF1FB
+}
+.navtrans-navlist-view:hover .navtrans-navlist-title {
+    background: #EBF1FB
+}
+
+.navtrans-navlist-view.active .navtrans-navlist-label {
+    background: #0C88E8;
+}
+.navtrans-navlist-label {
+    float: left;
+    width: auto;
+    padding: 0 15px;
+    background: #888;
+    color: #fff;
+    margin-top: -26px;
+    margin-left: -21px;
+    _margin-left: -11px;
+    line-height: 20px;
+}
+.navtrans-navlist-view .navtrans-navlist-arrow {
+    float: right;
+    width: 7px;
+    height: 4px;
+    background-image: url(../images/nav-icon.png);
+    background-repeat: no-repeat;
+    background-position: -40px -70px;
+    margin-top: -19px;
+    margin-right: -13px;
+    _background-image: url(../images/nav-icon_ie6.png);
+}
+.navtrans-navlist-view.expand .navtrans-navlist-arrow {
+    background-position: -54px -70px;
+}
+.navtrans-navlist-title-p span {
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid #ddd;
+}
+.navtrans-navlist-list {
+    color: #666;
+    line-height: 20px;
+}
+.navtrans-navlist-list li {
+    padding: 10px;
+    border-bottom: 1px solid #E4E6E7;
+    overflow: hidden;
+}
+.navtrans-navlist-content ul {
+    padding: 0px;
+    margin: 0px;
+}
+.navtrans-navlist-list-content {
+    overflow: hidden;
+}
+.navtrans-navlist-view.expand .navtrans-navlist-content {
+    display: block;
+}
+.navtrans-navlist-view .navtrans-navlist-content {
+    display: none;
+}
+.navtrans-navlist-icon {
+    float: left;
+    width: 0px;
+    height: 16px;
+    background: url(../images/nav-icon.png) no-repeat 0 0;
+    _background: url(../images/nav-icon_ie6.png) no-repeat 0 0;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+#dijit__WidgetBase_3{
+    overflow-y: hidden;
+}

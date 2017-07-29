@@ -1,0 +1,16 @@
+{
+  "groupSetting": [
+    {
+      "label": "AttributeTable",
+      "type": "dropDown"
+    },
+    {
+      "label": "应急",
+      "type": "dropDown"
+    },
+    {
+      "label": "更多菜单",
+      "type": "dropDown"
+    }
+  ]
+}

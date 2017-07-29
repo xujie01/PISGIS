@@ -1,0 +1,54 @@
+.jimu-widget-measurement .measure-section{
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 15px 0px 0px;
+}
+
+.jimu-widget-measurement .area-units-tip{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 17px;
+}
+
+.jimu-rtl .jimu-widget-measurement .area-units-tip{
+    padding-left: 0;
+    padding-right: 17px;
+}
+
+.jimu-widget-measurement .distance-units-tip{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 17px;
+}
+
+.jimu-rtl .jimu-widget-measurement .distance-units-tip{
+    padding-left: 0;
+    padding-right: 17px;
+}
+
+.jimu-widget-measurement .operations{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.jimu-widget-measurement .operations .jimu-btn{
+    padding: 0 18px;
+    height: 32px;
+    line-height: 33px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 10px;
+}
+
+.jimu-rtl .jimu-widget-measurement .operations .jimu-btn{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.jimu-widget-measurement .operations .jimu-btn.last-btn{
+    margin-right: 0;
+}
+
+.jimu-rtl .jimu-widget-measurement .operations .jimu-btn.last-btn{
+    margin-left: 0;
+}

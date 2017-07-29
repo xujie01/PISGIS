@@ -1,0 +1,88 @@
+<div style="background-color: #ffffff;height: 100%">
+    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="printSettingsFormDijit">
+        <table cellspacing="5" style="width:100%;">
+            <tr data-dojo-attach-point="titleTr">
+                <td style="width:65px;">
+                    ${nls.keyworld}:
+                </td>
+                <td>
+                    <input type="text" data-dojo-attach-point="queryWord" placeholder="${nls.querycondition}" data-dojo-attach-event="keypress:_keypressHandler" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="style:'width:100%;'" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="buttonActionBar jimu-align-traiing">
+        <!--<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="advancedButtonDijit" data-dojo-props="iconClass:'settingsIcon',showLabel:true">
+              <span>高级</span>
+            <div data-dojo-type="dijit/TooltipDialog" class="jimu-widget-keypoints">
+                <div style="width:250px;">
+                    <div style="font-weight:bold;">
+                        暂未支持
+                    </div>
+                    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="layoutMetadataDijit">
+                        <table cellspacing="5" style="width:100%;">
+                            <tr >
+                                <td>
+                                    类别:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="trim:true,required:false,style:'width:100%;'"/>
+                                </td>
+                            </tr>
+                            <tr data-dojo-attach-point="departmentTr">
+                                <td>
+                                    部门:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-attach-point="departmentNode" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="name:'department',trim:true,required:false,style:'width:100%;'" data-dojo-attach-point="departmentTB"
+                                    />
+                                </td>
+                            </tr>
+                            <tr data-dojo-attach-point="pipelineTr">
+                                <td>
+                                    管线:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-attach-point="pipelineNode" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="name:'pipeline',trim:true,required:false,style:'width:100%;'" />
+                                </td>
+                            </tr>
+                            <tr >
+                                <td>
+                                    方式:
+                                </td>
+                                &lt;!&ndash;<td>
+                                    <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="trim:true,required:false,style:'width:100%;'"/>
+                                </td>&ndash;&gt;
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="busyLabel:'querying',iconClass:'seeIcon'"
+             data-dojo-attach-event="onClick:queryClick" data-dojo-attach-point="queryButtonDijit">
+            ${nls.query}
+        </div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="busyLabel:'adding',iconClass:'addIcon'"
+             data-dojo-attach-event="onClick:addClick" data-dojo-attach-point="addButtonDijit">
+            ${nls.add}
+        </div>
+    </div>
+    <div style="width: 100%;height:calc(100% - 70px);" data-dojo-attach-point="h_groupGrid">
+        <div data-dojo-attach-point="gridDiv" style="height:calc(100% - 30px);width:100%;background-color:#f3f3f3;">
+            <div data-dojo-attach-point="gridDivNode" style="height:100%;background-color:#f3f3f3;"></div>
+        </div>
+        <div class="operations">
+            <div style="height: 30px;width: 100%" data-dojo-attach-point="pageToolDiv"></div>
+        </div>
+    </div>
+    <div data-dojo-type="dijit/Dialog" data-dojo-attach-point="deleteDialog" title="${nls.tip}">
+        <tr>
+            <td><label>${nls.isdelete}</label></td>
+        </tr>
+        <div class="dijitDialogPaneActionBar" style="width: 200px;">
+            <button data-dojo-type="dijit/form/Button" type="button"  data-dojo-attach-event="onClick:_onDeleteClick" data-dojo-attach-point="btnOk">${nls.ok}</button>
+            <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-event="onClick:_onDeleteCancel" data-dojo-attach-point="btnCancel" >${nls.cancel}</button>
+        </div>
+    </div>
+</div>

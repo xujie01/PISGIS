@@ -1,0 +1,38 @@
+<div style="background-color: #ffffff;height: 100%" data-dojo-attach-point="monitorPanel">
+    <div data-dojo-attach-point="monitorShow">
+        <div data-dojo-attach-point="monitorNav" data-dojo-attach-event="onclick:_onMonitorNavClick" style="padding-left: 3px;">
+            <!--<a href="http://langfang.anjuke.com">中国石油天然气股份有限公司</a> &gt; <a href="http://langfang.anjuke.com/sale/">廊坊二手房</a> &gt; <a href="http://langfang.anjuke.com/sale/guangyang/">广阳二手房</a>-->
+        </div>
+        <table cellspacing="0" width="100%" style="border-collapse:separate; border-spacing:5px;">
+            <colgroup>
+                <col width="90px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr>
+                <td style="vertical-align:middle;">
+                    <span>${nls.inspectionDate}:</span>
+                </td>
+                <td>
+                    <input type="text" data-dojo-attach-point="monitorDate" data-dojo-type="dijit/form/DateTextBox" class="dateText" data-dojo-attach-event="onChange:_onDateChange"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align:middle;">
+                    <span>${nls.patrol}:</span>
+                </td>
+                <td>
+                    <img src="jimu.js/magicgis/images/monitor/all_d.png" style="width: 25px;height: 25px; float: left;" title="${nls.total}"/>
+                    <div data-dojo-attach-point="monitorAll" style="float: left;line-height: 25px;"></div>
+                    <img src="jimu.js/magicgis/images/monitor/on_d.png" style="width: 25px;height: 25px; float: left;" title="${nls.online}"/>
+                    <div data-dojo-attach-point="monitorOn" style="float: left;line-height: 25px;"></div>
+                    <img src="jimu.js/magicgis/images/monitor/out_d.png" style="width: 25px;height: 25px; float: left;" title="${nls.offline}"/>
+                    <div data-dojo-attach-point="monitorOff" style="float: left;line-height: 25px;"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="minitorSettingContent" data-dojo-attach-point="settingContent" style="overflow-y: auto">
+    </div>
+</div>

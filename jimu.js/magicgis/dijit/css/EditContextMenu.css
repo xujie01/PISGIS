@@ -1,0 +1,44 @@
+.jimu-widget-editcontextmenu .PMap_contextMenu {
+    position: absolute;
+    border-top: 1px solid #adbfe4;
+    border-left: 1px solid #adbfe4;
+    border-right: 1px solid #8ba4d8;
+    border-bottom: 1px solid #8ba4d8;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background: #fff;
+    z-index: 10000000;
+}
+/*.jimu-widget-editcontextmenu .PMap_cmShadow {
+    position: absolute;
+    background: #000;
+    opacity: .3;
+    z-index: 9000000;
+}*/
+.jimu-widget-editcontextmenu .PMap_cmDivider {
+    border-bottom: 1px solid #adbfe4;
+    font-size: 0;
+    padding: 1px;
+    margin: 0 6px;
+}
+.jimu-widget-editcontextmenu .cmitem_delete {
+    background: url(../../images/edit_delete.png) no-repeat;
+    padding-left: 14px !important;
+}
+.jimu-widget-editcontextmenu .cmitem_item {
+    padding: 2px 6px;
+    margin: 0px 2px;
+    font-size: 12px;
+    line-height: 17px;
+    width: 70px;
+    color: rgb(0, 0, 0); /*rgb(170, 170, 170);rgb(102, 136, 204)*/
+    cursor: pointer;
+}
+.jimu-widget-editcontextmenu .cmitem_item:hover {
+    color:rgb(102, 136, 204); /*rgb(170, 170, 170);rgb(102, 136, 204)*/
+}
+.jimu-widget-editcontextmenu .cmitem_item.unable {
+    color: rgb(170, 170, 170); /*rgb(170, 170, 170);rgb(102, 136, 204)*/
+    cursor: url("../../images/openhand.cur") 8 8, default;;
+}

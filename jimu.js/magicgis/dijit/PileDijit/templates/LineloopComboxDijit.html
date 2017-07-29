@@ -1,0 +1,17 @@
+<div style="width:100%;" class="pipeComboxDijit">
+    <input class="LineloopComboxDijitClass" data-dojo-attach-point="LineloopComboxDiv" data-dojo-type="dijit/form/ComboBox"
+         data-dojo-props="name:'title',trim:true,style:'width:100%;height:100%;text-align:center;line;line-height: 28px;'"
+         data-dojo-attach-event="Click:_popupLineloopPanel" readonly/>
+    <div class="LineloopComboxDijitClass" data-dojo-attach-point="LineloopPanelDiv" style="background-color: #FFFFFF;width:273px;overflow-x: hidden;">
+        <div data-dojo-attach-point="treeDiv" style="width:100%;height:200px;"></div>
+        <div cellspacing="0" style="margin: 3px 5px;width: 100%;height: 28px">
+            <input data-dojo-attach-point="queryDiv" style="height: 25px;display: inline-block;width: calc(100% - 105px)" placeholder="${nls.filter}"/>
+            <div data-dojo-type="dijit/form/Button" style="display: inline-block" data-dojo-attach-point="btnCancel" data-dojo-attach-event="click:cancelClick">
+                ${nls.cancel}
+            </div>
+            <div data-dojo-type="dijit/form/Button" style="display: inline-block" data-dojo-attach-point="btnOk" data-dojo-attach-event="click:okClick">
+                ${nls.ok}
+            </div>
+        </div>
+    </div>
+</div>

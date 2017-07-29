@@ -1,0 +1,12 @@
+.jimu-widget-monitor .dateText{
+    width: 100%;
+    height:22px;
+}
+.jimu-widget-monitor .dijitTextBox .dijitInputInner{
+    height: 19px !important;
+}
+.jimu-widget-monitor a:hover
+{
+    background-color: #ffffff;
+    color: #0033FF
+}

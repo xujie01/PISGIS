@@ -1,0 +1,17 @@
+<div style="background-color: #ffffff">
+  <img data-dojo-attach-point="first" src="jimu.js/magicgis/images/keypoints/page-first.gif" data-dojo-attach-event="onclick:_onPageFirstClick" style="width: 16px;height: 16px; float:left;cursor: pointer;margin-left: 3px;margin-top: 3px;" title="首页"/>
+    <img data-dojo-attach-point="prev" src="jimu.js/magicgis/images/keypoints/page-prev.gif" data-dojo-attach-event="onclick:_onPagePrevClick" style="width: 16px;height: 16px; float:left;cursor: pointer;margin-left: 3px;margin-top: 3px;" title="上一页"/>
+    <div style="float: left;line-height: 24px;margin-left: 3px;">${nls.page}：</div>
+    <input data-dojo-attach-point="inputPage" data-dojo-type="dijit/form/NumberSpinner" style="width:57px;height:24px;float: left;"margin-left: 3px;
+           data-dojo-props='value:0,smallDelta:1,constraints:{min:1},intermediateChanges:true'>
+    </input>
+    <div style="float: left;line-height: 24px;margin-left: 3px;">${nls.allpage}</div>
+    <div data-dojo-attach-point="lbTotalPage" style="float: left;line-height: 24px;margin-left: 3px;">0</div>
+    <div style="float: left;line-height: 24px;margin-left: 3px;">${nls.nowpage}</div>
+    <img data-dojo-attach-point="next" src="jimu.js/magicgis/images/keypoints/page-next.gif" data-dojo-attach-event="onclick:_onPageNextClick" style="width: 16px;height: 16px; float:left;cursor: pointer;margin-left: 3px;margin-top: 3px;" title="下一页"/>
+    <img data-dojo-attach-point="last" src="jimu.js/magicgis/images/keypoints/page-last.gif" data-dojo-attach-event="onclick:_onPageLastClick" style="width: 16px;height: 16px; float:left;cursor: pointer;margin-left: 3px;margin-top: 3px;" title="末页"/>
+    <img data-dojo-attach-point="refresh" src="jimu.js/magicgis/images/keypoints/refresh.gif" data-dojo-attach-event="onclick:_onPageRefreshClick" style="width: 16px;height: 16px; float:left;cursor: pointer;margin-left: 3px;margin-top: 3px;" title="刷新"/>
+    <div style="float: left;line-height: 24px;margin-left: 3px;">${nls.allpage}</div>
+    <div data-dojo-attach-point="lbTotalCount" style="float: left;line-height: 24px;">0</div>
+    <div style="float: left;line-height: 24px;margin-left: 3px;">${nls.nowitem}</div>
+</div>

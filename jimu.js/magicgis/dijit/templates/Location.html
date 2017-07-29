@@ -1,0 +1,82 @@
+<div style="background-color: #ffffff">
+  <table  cellspacing="0" width="100%" style="margin: 10px 0px 10px 0px;border-collapse:separate; border-spacing:5px;">
+    <colgroup>
+      <col width="50px"></col>
+      <col width="auto"></col>
+      <col width="20px"></col>
+      <col width="auto"></col>
+        <col width="20px"></col>
+        <col width="auto"></col>
+        <col width="20px"></col>
+    </colgroup>
+    <tbody>
+    <tr>
+      <td style="vertical-align:middle;">
+        <span>${nls.lon}:</span>
+      </td>
+      <td>
+        <input data-dojo-attach-point="lonDegree" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+      </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.degree}</span>
+        </td>
+        <td>
+            <input data-dojo-attach-point="lonFen" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+        </td>
+        </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.fen}</span>
+        </td>
+        <td>
+            <input data-dojo-attach-point="lonSec" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+        </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.sec}</span>
+        </td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">
+        <span>${nls.lat}:</span>
+      </td>
+      <td>
+        <input data-dojo-attach-point="latDegree" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+      </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.degree}</span>
+        </td>
+        <td>
+            <input data-dojo-attach-point="latFen" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+        </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.fen}</span>
+        </td>
+        <td>
+            <input data-dojo-attach-point="latSec" type="text"  value="" class="jimu-float-trailing" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+        </td>
+        <td style="vertical-align:middle;">
+            <span>${nls.sec}</span>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+    <div style="height:30px;">
+       <!-- <div class="jimu-btn" style="line-height: 28px;float: right;margin-left: 3px" data-dojo-attach-point="btnOk" data-dojo-attach-event="onclick:_onOkClick">${nls.btnOk}</div>
+        <div class="jimu-btn" style="line-height: 28px;float: right;margin-left: 3px" data-dojo-attach-point="btnReset" data-dojo-attach-event="onclick:_onResetClick">${nls.btnReset}</div>-->
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'okIcon'" style="float: right"
+             data-dojo-attach-event="onClick:_onOkClick" data-dojo-attach-point="btnOk">
+            ${nls.btnOk}
+        </div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'resetIcon'" style="float: right"
+             data-dojo-attach-event="onClick:_onResetClick" data-dojo-attach-point="btnReset">
+            ${nls.btnReset}
+        </div>
+        <div title="${nls.mapPoint}" class="point-icon" data-dojo-attach-point="pointIcon" data-dojo-attach-event="onclick:_onLocation"></div>
+        <a href="#" class="pic-a">
+            <input title="${nls.picLocation}" class="pic-icon" type="file" data-dojo-attach-point="picIcon" data-dojo-attach-event="onchange:_onPicture">
+        </a>
+    </div>
+    <div data-dojo-attach-point="localImag" style="display: none;width: 100%;">
+        <div >${nls.imgPreview}：</div>
+        <img data-dojo-attach-point="localPreview" style="width: 100%;">
+    </div>
+</div>

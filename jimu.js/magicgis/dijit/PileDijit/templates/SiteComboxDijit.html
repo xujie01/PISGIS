@@ -1,0 +1,21 @@
+<div style="width:100%;" class="pipeComboxDijit">
+    <input class="SiteComboxDijitClass" style="display: inline-block" data-dojo-attach-point="SiteComboxDiv" data-dojo-type="dijit/form/ComboBox"
+         data-dojo-props="name:'title',trim:true,style:'width:calc(100% - 75px);height:100%;text-align:center;line;line-height: 28px;'"
+         data-dojo-attach-event="Click:_popupSitePanel" readonly/>
+    <span>+</span>
+    <input style="display: inline-block;width: 40px;height: 100%" data-dojo-attach-point="siteOffsetDiv"/>
+    <span>(m)</span>
+    <div class="SiteComboxDijitClass" data-dojo-attach-point="SitePanelDiv" style="background-color: #FFFFFF;width:273px;overflow-x: hidden;">
+        <div data-dojo-attach-point="gridDivNode" style="width:100%;height:200px;"></div>
+        <div cellspacing="0" style="margin: 3px 5px;width: 100%;height: 28px;text-align: right;padding-right: 5px">
+            <input data-dojo-attach-point="queryDiv" style="height: 25px;display: inline-block;width: calc(100% - 105px)" placeholder="${nls.filter}"/>
+            <!--<div data-dojo-attach-point="lineloopNum" style="display: inline-block">-->
+            <div data-dojo-type="dijit/form/Button" style="display: inline-block" data-dojo-attach-point="btnCancel" data-dojo-attach-event="click:cancelClick">
+                ${nls.cancel}
+            </div>
+            <div data-dojo-type="dijit/form/Button" style="display: inline-block" data-dojo-attach-point="btnOk" data-dojo-attach-event="click:okClick">
+                ${nls.ok}
+            </div>
+        </div>
+    </div>
+</div>

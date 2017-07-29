@@ -1,0 +1,54 @@
+.jimu-widget-uploadpanorama .point-icon{
+    margin-left: 3px;
+    float: right;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background-image: url(../images/location.png);
+}
+.jimu-widget-uploadpanorama .point-icon.active{
+    background-image: url(../images/locationActive.png);
+}
+
+.jimu-widget-uploadpanorama .pic-icon{
+    /*float: right;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background-image: url(../images/picLoad.png);*/
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:100px;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.jimu-widget-uploadpanorama .pic-a{
+    float: right;
+    display:inline-block;
+    width:28px;
+    height:28px;
+    background-image: url(../images/picLoad.png);
+    position:relative;
+    overflow:hidden;
+}
+.jimu-widget-uploadpanorama .pic-a:hover{
+    background-image: url(../images/picLoad.png);
+    background-color: inherit;
+}
+
+.jimu-widget-uploadpanorama .okIcon{
+    background-image: url(../images/ok.png);
+    width: 16px;
+    height: 16px;
+}
+.jimu-widget-uploadpanorama .uploadIcon{
+    background-image: url(../images/upload.png);
+    width: 16px;
+    height: 16px;
+}
+.jimu-widget-uploadpanorama .resetIcon{
+    background-image: url(../images/back.png);
+    width: 16px;
+    height: 16px;
+}

@@ -1,0 +1,30 @@
+﻿define(
+   ({
+    "_widgetLabel": "巡检点",
+       keyworld:"关键字",
+       querycondition:"请输入查询条件",
+       query:"查询",
+       add:"增加",
+       tip:"提示",
+       isdelete:"是否删除",
+       ok:"确定",
+       cancel:"取消",
+       keypointdetail:"关键点详情",
+       name:"名称",
+       type:"类型",
+       radius:"缓冲范围",
+       pipeliename:"管线名称",
+       lon:"经度",
+       lat:"纬度",
+       describ:"描述",
+       keypointname:"关键点名称",
+       position:"在线位置",
+       datetime:"有效日期",
+       buffer:"缓冲范围(米)",
+       department:"所属部门",
+       edit:"编辑",
+       delete:"删除",
+       deletesuccess:"关键点删除成功",
+       deletefail:"关键点删除失败"
+  })
+);

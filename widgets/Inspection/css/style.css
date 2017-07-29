@@ -1,0 +1,58 @@
+.jimu-widget-inspection .ui-tab-navigator {
+    height: 30px;
+    margin: 0;
+    padding-left: 0px;
+    float: left;
+}
+.jimu-widget-inspection .ui-tab-item {
+    border: 1px solid #d0daf3;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+    margin-right: -1px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.jimu-widget-inspection .ui-tab-item:first-child {
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.jimu-widget-inspection .ui-tab-item:last-child {
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    border-right: 1px solid #d0daf3;
+}
+.jimu-widget-inspection .ui-tab-item-active{
+    background-color: #6583cc;
+    border-color: #6583cc;
+}
+.jimu-widget-inspection .ui-tab-item span{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #8ba4e1;
+    margin: 0 5px 0 5px;
+}
+.jimu-widget-inspection .ui-tab-item-active span{
+    color: #fff;
+}
+
+.jimu-widget-inspection table.gridtable {
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+.jimu-widget-inspection table.gridtable td {
+    border-width: 1px;
+    padding:3px;
+    border-style: solid;
+    border-color: #666666;
+}
+.jimu-widget-inspection table.gridtable td.tdKey {
+    background-color: #A9A9A9;
+}

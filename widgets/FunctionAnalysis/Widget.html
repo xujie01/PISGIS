@@ -1,0 +1,266 @@
+<div style="width: 100%;height: 100%;padding: 0px;" >
+    <div style="height: 35px;">
+        <div style="float: left;">
+            <ul id="functionAnalysisUL" data-dojo-attach-point="typeBtn" class="ui-tab-navigator">
+                <li class="ui-tab-item ui-tab-item-active" data-id="boom"><span>${nls.boomradius}</span></li>
+                <li class="ui-tab-item" data-id="analysis"><span>${nls.analysis}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel panel-info" style="height: calc(100% - 45px);overflow-y: auto">
+        <div class="panel-heading">${nls.accidentSpotInfo}</div>
+        <table class="table table-condensed table-bordered" width="100%" style="margin-bottom: 10px;">
+            <colgroup>
+                <col width="95px"></col>
+                <col width="auto"></col>
+                <col width="95px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.position}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divNAME"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.mediumtype}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divMEDIUMTYPE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.eleva}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divELEVATION"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.depofcover}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divDEPTH"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.ishca}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divISHCA"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.riskgrade}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divRISKGRADE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.pipetype}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divPIPETYPE"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.pipeWeldType}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divMANUPIPESEAMTYPE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.pipeLevel}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divGRADE"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.operapressure}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divPRESSURE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.diameter}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divDIAMETER"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.thickness}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divWALLTHICKNESS"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.plumbersName}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divGNAME"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.plumbersPhone}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divGPHONE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.transmissionName}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divXNAME"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.transmissionPhone}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divXPHONE"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="width: 100%;height: 115px;" data-dojo-attach-point="gridDivNode"></div>
+        <div data-dojo-attach-point="boomTab" style="margin-top: 10px;">
+            <!--<div style="margin: 2px;display: inline-block">${nls.boomradius}(m)：</div>
+            <input value="200" data-dojo-attach-point="distanceText" style="margin: 2px;display: inline-block">
+            <div style="margin: 2px;display: inline-block" data-dojo-type="dijit/form/Button" data-dojo-attach-event="click:_onQueryBtnClick">
+                ${nls.query}
+            </div>-->
+            <div class="input-group">
+                <input type="text" class="form-control" data-dojo-attach-point="distanceText" placeholder="${nls.boomradius}(m)">
+                <span class="input-group-btn">
+        <button class="btn btn-default" type="button" data-dojo-attach-event="click:_onQueryBtnClick">${nls.query}</button>
+      </span>
+            </div><!-- /input-group -->
+        </div>
+        <div style="display: none;" data-dojo-attach-point="analysisTab">
+            <table class="table table-condensed table-bordered" width="100%" style="margin: 10px 0;">
+                <colgroup>
+                    <col width="95px"></col>
+                    <col width="auto"></col>
+                    <col width="95px"></col>
+                    <col width="auto"></col>
+                </colgroup>
+                <tbody>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.diameter}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divDIAMETER1" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                    <td>
+                        <span>${nls.thickness}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divWALLTHICKNESS1" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.mediumdensity}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divDENSITY" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                    <td>
+                        <span>${nls.buoyancywaterdensity}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divWATERDENSITY" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.flowaroundwaterdensity}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divFLOWWATERDENSITY" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                    <td>
+                        <span>${nls.flowrate}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divFLOWWATER" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.pipeangle}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divPIPEANGLE" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                    <td>
+                        <span>${nls.yieldstrength}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divYIEDSTRENGT" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.modulus}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divMODULUS" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                    <td>
+                        <span>${nls.inpressure}:</span>
+                    </td>
+                    <td>
+                        <input data-dojo-attach-point="divINPRESSURE" style="width: 100%;" onkeyup="value=value.replace(/[^\d.]/g,'').replace(/^\./g,'').replace(/\.{2,}/g,'.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.')"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.result}:</span>
+                    </td>
+                    <td colspan="3">
+
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.complexload}:</span>
+                    </td>
+                    <td colspan="3">
+                        <input data-dojo-attach-point="divCOMPLEXLOAD" style="width: 100%;"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.floatlength}:</span>
+                    </td>
+                    <td colspan="3">
+                        <input data-dojo-attach-point="divFLOATLENTH" style="width: 100%;"/>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <span>${nls.ultimatefloatlength}:</span>
+                    </td>
+                    <td colspan="3">
+                        <input data-dojo-attach-point="divUFLOATLENTH" style="width: 100%;"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div  class="btn btn-info pull-right" data-dojo-attach-event="click:_onCalculate">
+                ${nls.calculate}
+            </div>
+        </div>
+    </div>
+</div>

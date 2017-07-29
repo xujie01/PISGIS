@@ -1,0 +1,55 @@
+<div>
+    <table cellspacing="5" class="mytable" style="width:100%;">
+        <colgroup>
+            <col width="90px"></col>
+            <col width="auto"></col>
+        </colgroup>
+        <tr>
+            <td>
+                ${nls.name}:
+            </td>
+            <td>
+                <input type="text" style="width: 100%" data-dojo-attach-point="nameNode"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ${nls.type}:
+            </td>
+            <td>
+                <!--<input type="text" data-dojo-attach-point="typeNode"/>-->
+                <select data-dojo-attach-point="typeNode" data-dojo-type="dijit/form/Select" style="width: 100%;height: 20px;"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ${nls.unit}:
+            </td>
+            <td>
+                <input type="text" style="width: 100%" data-dojo-attach-point="departmentNode"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ${nls.describ}:
+            </td>
+            <td>
+                <input type="text" style="width: 100%" data-dojo-attach-point="describNode"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ${nls.scropvisible}:
+            </td>
+            <td>
+                <!--<input type="text" data-dojo-attach-point="visibleNode"  style="width: 100%"/>-->
+                <select data-dojo-attach-point="visibleNode" data-dojo-type="dijit/form/Select" style="width: 100%;height: 20px;"></select>
+            </td>
+        </tr>
+    </table>
+    <div style="border-top:1px solid #e5e6e6; height: 28px;padding: 2px 2px;">
+        <!--<input type="button" value="${nls.save}" data-dojo-attach-event="onClick:_onSaveClick"
+               style="background:url(jimu.js/magicgis/images/monitor/ok.png);float: right;height: 23px;background-repeat: no-repeat;padding: 0px 5px 0px 20px;cursor: pointer;border-radius: 5px; border: solid #20d64a 2px;margin-left: 3px;"/>-->
+        <input type="button" value="${nls.save}" data-dojo-attach-event="onClick:_onSaveClick" class="btn btn-default pull-right btn-info btn-xs"/>
+    </div>
+</div>

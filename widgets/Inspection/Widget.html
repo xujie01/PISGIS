@@ -1,0 +1,283 @@
+<div style="width: 100%;height: 100%;padding: 0px;" >
+    <div style="height: 35px;">
+        <input type="text" data-dojo-attach-point="inspectionDate" data-dojo-type="dijit/form/DateTextBox"
+               style="width: 120px;height: 30px;float: left" data-dojo-attach-event="onChange:_onDateChange"/>
+        <!--<img style="float: left;margin: 5px;cursor: pointer;" src="widgets/Inspection/images/location.png" data-dojo-attach-event="onclick:_onLocaion"/>-->
+        <button type="button" class="btn btn-default btn-sm" style="float: left;margin: 0 5px;" data-dojo-attach-event="onclick:_onLocaion">
+            <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+        </button>
+        <div style="float: left;" data-dojo-attach-point="listPersons">
+            <ul data-dojo-attach-point="personsDiv" id="personsUL" class="ui-tab-navigator">
+            </ul>
+        </div>
+    </div>
+    <div style="height: calc(100% - 35px);overflow-y: auto">
+        <div class="panel panel-info">
+            <div class="panel-heading">${nls.basicInfo}</div>
+            <table class="table table-condensed table-bordered" width="100%">
+                <colgroup>
+                    <col width="95px"></col>
+                    <col width="auto"></col>
+                    <col width="95px"></col>
+                    <col width="auto"></col>
+                </colgroup>
+                <tbody>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.location}:</span>
+                    </td>
+                    <td colspan="3">
+                        <div data-dojo-attach-point="divNAME"></div>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.patrolUnit}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divUNITNAME"></div>
+                    </td>
+                    <td class="tdKey">
+                        <span>${nls.patrolman}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divUSERNAME"></div>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.patrolmode}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divPROWAY"></div>
+                    </td>
+                    <td class="tdKey">
+                        <span>${nls.inspectiontool}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divINSVEHICLE"></div>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.loggingdevices}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divINSDEVICE"></div>
+                    </td>
+                    <td class="tdKey">
+                        <span>${nls.inspectionfrequency}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divINSFREQUNIT"></div>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.inspectiontotallength}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divALLLENGTH"></div>
+                    </td>
+                    <td class="tdKey">
+                        <span>${nls.currentinspectionpoint}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divCURENTLENGTH"></div>
+                    </td>
+                </tr>
+                <tr style="vertical-align:middle;">
+                    <td class="tdKey">
+                        <span>${nls.totalnumberofkeypoints}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divALLLKEYNUM"></div>
+                    </td>
+                    <td class="tdKey">
+                        <span>${nls.currentnumberofpatrolsection}:</span>
+                    </td>
+                    <td>
+                        <div data-dojo-attach-point="divCURENTKEYNUM"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">${nls.inspectionprogram}</div>
+            <table class="table table-condensed table-bordered" width="100%">
+            <colgroup>
+                <col width="95px"></col>
+                <col width="auto"></col>
+                <col width="95px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.numbering}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divPLANNO"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.executivedepartment}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divEXECUNITNAME"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.inspectionline}:</span>
+                </td>
+                <td colspan="3">
+                    <div data-dojo-attach-point="divPOSITION"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.inspectiontyp}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divINSTYPE"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.dateRange}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divDATERANGE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.basisPreparation}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divDETERMINANT"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.dateofpreparation}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divCREATEDATE"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">${nls.scanningtask}</div>
+            <table class="table table-condensed table-bordered" width="100%">
+            <colgroup>
+                <col width="95px"></col>
+                <col width="auto"></col>
+                <col width="95px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.taskDate}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divINSBDATE"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.scanningtype}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divINSTYPE"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.pollinglocation}:</span>
+                </td>
+                <td colspan="3">
+                    <div data-dojo-attach-point="divTASKPOSITION"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">${nls.inspectionrecords}</div>
+            <table class="table table-condensed table-bordered" width="100%">
+            <colgroup>
+                <col width="95px"></col>
+                <col width="auto"></col>
+                <col width="95px"></col>
+                <col width="auto"></col>
+            </colgroup>
+            <tbody>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.inspectiontime}:</span>
+                </td>
+                <td colspan="3">
+                    <div data-dojo-attach-point="divLOGTIME"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.passrate}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divINSYIELD"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.trackPoints}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divTRACKPOINTS"></div>
+                </td>
+            </tr>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.averagespeed}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divAVGSPEED"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.path}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divLOGPOSITION"></div>
+                </td>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.pipelengthshouldpatrol}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divSLENGTH"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.realTourpipelength}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divRLENGTH"></div>
+                </td>
+            <tr style="vertical-align:middle;">
+                <td class="tdKey">
+                    <span>${nls.skeypoints}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divSKEYPOINT"></div>
+                </td>
+                <td class="tdKey">
+                    <span>${nls.rkeypoints}:</span>
+                </td>
+                <td>
+                    <div data-dojo-attach-point="divRKEYPOINT"></div>
+                </td>
+            </tbody>
+        </table>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">${nls.keypointsInfo}</div>
+            <div style="width: 100%;" data-dojo-attach-point="gridDivNode"></div>
+        </div>
+    </div>
+</div>

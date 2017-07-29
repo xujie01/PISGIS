@@ -1,0 +1,180 @@
+.jimu-widget-cinfowindow .iwToolBar .button {
+    float: left;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    display: inline;
+    line-height: 19px;
+}
+.jimu-widget-cinfowindow .iwFooterContainer .iwToolBar .startIcon, .iwFooterContainer .iwToolBar .endIcon, .iwFooterContainer .iwToolBar .searchIcon {
+    width: 15px;
+    height: 16px;
+    display: block;
+    background: url('../../images/monitor/iwIcon.png') no-repeat;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    margin: 3px 3px 0 0;
+}
+.jimu-widget-cinfowindow .iwFooterContainer .iwToolBar .startIcon {
+    background-position: -67px 0;
+}
+.jimu-widget-cinfowindow .iwFooterContainer .iwToolBar .endIcon {
+    background-position: -82px 0;
+}
+.jimu-widget-cinfowindow .iwFooterContainer .iwToolBar .searchIcon {
+    background-position: -97px 0;
+}
+.jimu-widget-cinfowindow .jimu-widget-cinfowindow, .setEndTab .set-end-text, .setStartTab .set-start-text, .setSearchTab .set-search-text {
+    font-weight: bold;
+}
+.jimu-widget-cinfowindow .iw-g-font {
+    color: #737373;
+    font-size: 12px;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer {
+    width: 254px;
+    clear: both;
+    overflow: hidden;
+    _zoom: 1;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .setEnd, .iwToolBarTabContainer .setStart, .iwToolBarTabContainer .SetSearch {
+    display: none;
+    padding: 5px 0;
+}
+.jimu-widget-cinfowindow .setEndTab .iwToolBarTabContainer .setEnd, .setStartTab .iwToolBarTabContainer .setStart, .setSearchTab .iwToolBarTabContainer .SetSearch {
+    display: block;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .textInput {
+    width: 115px;
+    padding: 2px;
+    border: 1px solid #b3bfd3;
+    float: left;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .btnInput {
+    width: 50px;
+    float: left;
+    font-size: 12px;
+    border: 1px solid #b3bfd3;
+    height: 22px;
+    line-height: 21px;
+    text-align: center;
+    color: #0059b3;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .textLabel {
+    width: auto;
+    padding: 0px;
+    float: left;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .classInput {
+    width: 180px;
+    height: 20px;
+    float: left;
+    padding: 0px 2px 0px 0px;
+}
+.jimu-widget-cinfowindow .iwToolBarTabContainer .classInput .dijitSelectLabel {
+    width:145px;
+    text-align: left;
+}
+
+#uiSuggestWrapUl li {
+    display: list-item;
+    list-style-type: none;
+    text-align: -webkit-match-parent;
+}
+#uiSuggestWrapUl .ui-suggest-item a {
+    display: block;
+    width: 225px;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 0px;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#uiSuggestWrapUl .ui3-suggest-item i.default {
+    display: none;
+}
+#uiSuggestWrapUl .ui-suggest-item i {
+    padding-left: 0px;
+    font-style: normal;
+    color: #666;
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+}
+#uiSuggestWrapUl .ui-suggest-item em {
+    font-style: normal;
+}
+#uiSuggestWrapUl .ui-suggest-item:hover a {
+    background-color: #EBEBEB;
+    cursor: pointer;
+    color: #666;
+}
+
+body .photo-class{
+    background-color: transparent;
+}
+.bigbtnPrev {
+    position: absolute; top: calc(50% - 90px); cursor: pointer; left: 10px
+}
+.bigbtnNext {
+    position: absolute; top: calc(50% - 90px); cursor: pointer; right: 270px
+}
+.big_play_prev {
+    background-image: url(../../images/leftbig.png); width: 50px;opacity: 0.3; display: block; height: 50px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../../images/leftbig.png')
+}
+.big_play_next {
+    background-image: url(../../images/rightbig.png); width: 50px;opacity: 0.3; display: inline-block; height: 50px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../../images/rightbig.png')
+}
+.bigImageOperation {
+    position: absolute; top: calc(100% - 120px); cursor: pointer; right: 270px
+}
+.big_play_origin {
+    background-image: url(../../images/originImg.png); width: 28px; opacity: 0.3;display: inline-block; height: 28px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../../images/rightbig.png')
+}
+.big_play_load {
+    background-image: url(../../images/loadImg.png); width: 28px; opacity: 0.3;display: inline-block; height: 28px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../../images/rightbig.png')
+}
+.image {
+    text-align: center;
+    float: left;
+    width: calc(100% - 20px);
+    height: calc(100% - 5px);
+    margin: 5px 10px 0px 10px;
+}
+.bigImgArea{
+    width: 100%;
+    height: 100%;
+}
+
+.thumbsImages {
+    width: 100%; height: 80px
+}
+.thumbsImages LI {
+    margin: 0px 7px; width: 80px; display: inline; float: left; height: 60px
+}
+.thumbsImages UL {
+    margin: 3px
+}
+.thumbsImages LI.last_img {
+    margin-right: 4px
+}
+.thumbsImages LI.btnPrev {
+    margin: 25px 10px 0px 15px; width: 9px; height: 16px; cursor: pointer
+}
+.thumbsImages LI.btnNext {
+    margin: 25px 10px 0px 15px; width: 9px; height: 16px; cursor: pointer
+}
+.thumbsImages LI A {
+    border-bottom: #fff 2px solid; border-left: #fff 2px solid; width: 80px;height: 70px; display: block; font-size: 0px; border-top: #fff 2px solid; border-right: #fff 2px solid
+}
+.thumbsImages LI A:hover {
+    border-bottom: #5e71ff 2px solid; border-left: #5e71ff 2px solid; border-top: #5e71ff 2px solid; border-right: #5e71ff 2px solid
+}
+.thumbsImages LI A.current {
+    border-bottom: #f8ae0f 2px solid; border-left: #f8ae0f 2px solid; border-top: #f8ae0f 2px solid; border-right: #f8ae0f 2px solid
+}

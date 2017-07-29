@@ -1,0 +1,28 @@
+<div style="background-color: #ffffff;border: 1px solid #cac3c3;">
+  <div style="border-bottom:1px solid #e5e6e6;">
+      <img src="jimu.js/magicgis/images/monitor/unit.png" style="width: 40px;height: 40px; display: inline-block"/>
+      <div style="display:inline-block;width:calc(100% - 45px)">
+          <div style="padding: 2px 0px;">
+              <div data-dojo-attach-point="unitName" data-dojo-attach-event="onclick:_onUnitClick" style="display:inline-block;cursor: pointer;font-weight: bold;"></div>
+              <img src="jimu.js/magicgis/images/monitor/k1.png" data-dojo-attach-event="onclick:_onUnitKeyPointClick" style="width: 16px;height: 16px; float: right;cursor: pointer;margin-left: 3px" title="${nls.keypoint}"/>
+              <img src="jimu.js/magicgis/images/monitor/l1.png" data-dojo-attach-event="onclick:_onLocationClick" style="width: 16px;height: 16px; float: right;cursor: pointer;" title="${nls.position}"/>
+          </div>
+          <div style="padding: 2px 0px;">
+              <div style="display:inline-block;">${nls.nowpersons}：</div>
+              <div style="display:inline-block;" data-dojo-attach-point="getPerson"></div>
+          </div>
+          <div style="padding: 2px 0px;">
+              <div style="display:inline-block;">${nls.patrol}：</div>
+              <div style="display:inline-block;" data-dojo-attach-point="getDevice"></div>
+          </div>
+      </div>
+  </div>
+    <div style="padding:2px 0px 2px 40px">
+        <div style="display:inline-block;">${nls.keypoints}：</div>
+        <div style="display:inline-block;" data-dojo-attach-point="getPoint"></div>
+    </div>
+    <div style="padding:2px 0px 2px 40px">
+        <div style="display:inline-block;">${nls.patrollen}：</div>
+        <div style="display:inline-block;" data-dojo-attach-point="inspectionLen"></div>
+    </div>
+</div>
