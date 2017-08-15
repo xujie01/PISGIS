@@ -302,34 +302,15 @@
     },
     "widgets": [
       {
-        "name": "AddData",
-        "version": "2.4",
-        "uri": "widgets/AddData/Widget",
-        "config": "configs/IncidentAnalysis/config_IncidentAnalysis.json",
-        "index": 4,
-        "id": "widgets_IncidentAnalysis_Widget",
-        "position": {
-          "relativeTo": "map"
-        }
-      },
-      {
         "name": "IncidentAnalysis",
         "version": "2.4",
         "uri": "widgets/IncidentAnalysis/Widget",
         "config": "configs/IncidentAnalysis/config_IncidentAnalysis.json",
-        "index": 5,
+        "index": 6,
         "id": "widgets_IncidentAnalysis_Widget_24",
         "position": {
           "relativeTo": "map"
         }
-      },
-      {
-        "name": "Edit",
-        "version": "2.4",
-        "uri": "widgets/Edit/Widget",
-        "config": "configs/Edit/config_Edit.json",
-        "index": 6,
-        "id": "widgets_Edit_Widget_23"
       },
       {
         "name": "Measurement",
@@ -567,6 +548,26 @@
             "name": "Share",
             "popupWindow": "true",
             "config": "configs/Share/config_Share.json"
+          },
+
+          {
+            "name": "AddData",
+            "version": "2.4",
+            "uri": "widgets/AddData/Widget",
+            "config": "configs/IncidentAnalysis/config_IncidentAnalysis.json",
+            "index": 28,
+            "id": "widgets_IncidentAnalysis_Widget",
+            "position": {
+              "relativeTo": "map"
+            }
+          },
+          {
+            "name": "Edit",
+            "version": "2.4",
+            "uri": "widgets/Edit/Widget",
+            "config": "configs/Edit/config_Edit.json",
+            "index": 29,
+            "id": "widgets_Edit_Widget_23"
           }
         ],
         "index": 15,
