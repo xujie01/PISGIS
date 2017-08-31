@@ -7,7 +7,7 @@ define([ 'dojo/_base/lang',
         'dojo/dom-construct',
         "dojo/topic",
         'dojo/_base/array',
-        'dojox/xml/parser','dojo/query','dijit/_WidgetBase',
+        'dojo/query','dijit/_WidgetBase',
         'dijit/_TemplatedMixin',
         'jimu/dijit/LoadingIndicator',
         "jimu/magicgis/configProject",
@@ -15,7 +15,7 @@ define([ 'dojo/_base/lang',
         'dojo/Evented'
     ],
     function ( lang,_WidgetsInTemplateMixin,declare, connect,BaseWidget,html,domConstruct,topic,
-               array,parser,query,_WidgetBase,_TemplatedMixin,LoadingIndicator,configProject,template) {
+               array,query,_WidgetBase,_TemplatedMixin,LoadingIndicator,configProject,template) {
         var clazz=declare([_WidgetBase,_TemplatedMixin, _WidgetsInTemplateMixin],{
             templateString:template,
             baseClass: 'jimu-widget-muserinfowindow',

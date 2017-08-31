@@ -7,7 +7,6 @@ define([ 'dojo/_base/lang',
         'dojo/dom-construct',
         "dojo/topic",
         'esri/graphic',
-        'dojox/xml/parser',
         'esri/geometry/Point',"esri/symbols/PictureMarkerSymbol",'dijit/_WidgetBase',
         'dijit/_TemplatedMixin',"dijit/focus",'jimu/magicgis/util/commonUtils',
         'jimu/dijit/LoadingIndicator',
@@ -15,7 +14,7 @@ define([ 'dojo/_base/lang',
         'dojo/Evented'
     ],
     function ( lang,_WidgetsInTemplateMixin,declare, connect,BaseWidget,html,domConstruct,topic,
-               Graphic,parser,Point,PictureMarkerSymbol,_WidgetBase,_TemplatedMixin,focusUtil,commonUtils,LoadingIndicator,template) {
+               Graphic,Point,PictureMarkerSymbol,_WidgetBase,_TemplatedMixin,focusUtil,commonUtils,LoadingIndicator,template) {
         var clazz=declare([_WidgetBase,_TemplatedMixin, _WidgetsInTemplateMixin],{
             templateString:template,
             baseClass: 'jimu-widget-mcaompanyitem',
