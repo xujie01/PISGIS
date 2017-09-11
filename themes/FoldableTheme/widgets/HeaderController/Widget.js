@@ -34,12 +34,18 @@ define([
     'jimu/utils',
     'jimu/dijit/Message',
     './PopupTileNodes',
-     'jimu/WidgetManager',
+    'jimu/magicgis/util/PipelineOperation/MapPipelineStatus',
+    'jimu/WidgetManager',
+    'jimu/magicgis/util/PipelineOperation/MapPipelineOperation',
+    'dojo/topic',
+     "jimu/magicgis/util/CommonParams",
+     "jimu/magicgis/configProject",
     'dojo/NodeList-manipulate'
   ],
   function(declare, lang, array, html, aspect, query, on, Deferred, mouse,
     domConstruct, domGeometry, BaseWidget, PoolControllerMixin, tokenUtils, portalUtils,
-    portalUrlUtils, utils, Message, PopupTileNodes,WidgetManager) {
+    portalUrlUtils, utils, Message, PopupTileNodes,MapPipelineStatus,WidgetManager,
+     MapPipelineOperation,topic,CommonParams,configProject) {
     /* global jimuConfig */
     /* jshint scripturl:true */
     var clazz = declare([BaseWidget, PoolControllerMixin], {
@@ -130,8 +136,11 @@ define([
                   WidgetManager.getInstance().loadWidget(widget);
               }
           }
-
-          $("#OtherBtn").hover(lang.hitch(this,function(){
+          MapPipelineOperation.getInstance({
+              map:this.map
+          });
+          topic.subscribe("setSubTitle", lang.hitch(this, this.setSubTitle));//设置子标题
+          /*$("#OtherBtn").hover(lang.hitch(this,function(){
               this._onLogoMyClick();
           }),lang.hitch(this,function(){
               this._onLogoMyLeave();
@@ -142,9 +151,12 @@ define([
               this._onLogoMyLeave();
           }));
           on(this.OtherBtn, "click", lang.hitch(this,this._onLogoMyClick));
-          on(this.threeDType, "click", lang.hitch(this,this._onthreeDType));
+          on(this.threeDType, "click", lang.hitch(this,this._onthreeDType));*/
       },
 
+        setSubTitle: function(subTitle) {
+            this.subtitleNode.innerHTML = utils.sanitizeHTML(subTitle);
+        },
         _onLogoMyClick: function() {
             html.setStyle(this.OtherPanel, 'display', 'block');
         },
@@ -746,14 +758,14 @@ define([
         this._closeDropMenu();
 
         //var i, iconConfig, allIconConfigs = this.getAllConfigs();
-        var i, iconConfig, allIconConfigs = [];
-        //无按钮小部件
-        var tmpArr = this.getAllConfigs();
-        for(i = 0; i < tmpArr.length; i++){
-            if(tmpArr[i].noBtnUI!="true"){
-                allIconConfigs.push(tmpArr[i]);
-            }
-        }
+          var i, iconConfig, allIconConfigs = [];
+          //无按钮小部件
+          var tmpArr = this.getAllConfigs();
+          for(i = 0; i < tmpArr.length; i++){
+              if(tmpArr[i].noBtnUI!="true"){
+                  allIconConfigs.push(tmpArr[i]);
+              }
+          }
 
         //by default, the icon is square
         this.iconWidth = box.h;
@@ -855,13 +867,13 @@ define([
         }
 
         //set current open node
-        // if (this.openedId === iconConfig.id) {
-        //   html.addClass(node, 'jimu-state-selected');
-        //   if (node.config.widgets && node.config.widgets.length > 1 &&
-        //     node.config.openType === 'dropDown') {
-        //     this._openDropMenu(node);
-        //   }
-        // }
+         if (this.openedId === iconConfig.id) {
+           html.addClass(node, 'jimu-state-selected');
+           if (node.config.widgets && node.config.widgets.length > 1 &&
+             node.config.openType === 'dropDown') {
+             this._openDropMenu(node);
+           }
+         }
         return node;
       },
 
@@ -879,63 +891,50 @@ define([
       _onIconClick: function(node) {
         if (!node.config.widgets || node.config.widgets.length === 1 ||
           node.config.openType === 'openAll') {
+            //全屏
+            if(node.config.id == 'widgets_FullScreen_Widget'){
+                if(document.fullscreen || document.mozFullScreen || document.webkitIsFullScreen || this.isFullScreen){
+                    //退出全屏
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }
+                    this.isFullScreen=false;
+                }else{
+                    //启用全屏
+                    var docElm=document.documentElement;
+                    if(docElm.requestFullscreen) {
+                        docElm.requestFullscreen();//W3C
+                    } else if(docElm.mozRequestFullScreen) {
+                        docElm.mozRequestFullScreen();//FireFox
+                    } else if(docElm.msRequestFullscreen){
+                        docElm.msRequestFullscreen();//IE
+                    } else if(docElm.webkitRequestFullscreen) {
+                        docElm.webkitRequestFullScreen();//Chrom等
+                    }
+                    this.isFullScreen=true;
+                }
+                return;
+            }
+            //清除
+            if(node.config.id == 'widgets_Clean_Widget') {
+                this.map.graphics.clear();
+                var graphicsLayerIds=this.map.graphicsLayerIds;
+                for(var i= 0,l=graphicsLayerIds.length;i<l;i++){
+                    if (this.map.getLayer(graphicsLayerIds[i]).declaredClass == "esri.layers.GraphicsLayer"||
+                        this.map.getLayer(graphicsLayerIds[i]).declaredClass == "MeasureGraphicsLayer") {
+                        this.map.getLayer(graphicsLayerIds[i]).clear();
+                    }
+                }
+                return;
+            }
 
-          //全屏
-          if(node.config.id == 'widgets_FullScreen_Widget'){
-              if(document.fullscreen || document.mozFullScreen || document.webkitIsFullScreen || this.isFullScreen){
-                  //退出全屏
-                  if (document.exitFullscreen) {
-                      document.exitFullscreen();
-                  } else if (document.msExitFullscreen) {
-                      document.msExitFullscreen();
-                  } else if (document.mozCancelFullScreen) {
-                      document.mozCancelFullScreen();
-                  } else if (document.webkitExitFullscreen) {
-                      document.webkitExitFullscreen();
-                  }
-                  this.isFullScreen=false;
-              }else{
-                  //启用全屏
-                  var docElm=document.documentElement;
-                  if(docElm.requestFullscreen) {
-                      docElm.requestFullscreen();//W3C
-                  } else if(docElm.mozRequestFullScreen) {
-                      docElm.mozRequestFullScreen();//FireFox
-                  } else if(docElm.msRequestFullscreen){
-                      docElm.msRequestFullscreen();//IE
-                  } else if(docElm.webkitRequestFullscreen) {
-                      docElm.webkitRequestFullScreen();//Chrom等
-                  }
-                  this.isFullScreen=true;
-              }
-              return;
-          }
-          //清除
-          if(node.config.id == 'widgets_Clean_Widget') {
-              this.map.graphics.clear();
-              var graphicsLayerIds=this.map.graphicsLayerIds;
-              for(var i= 0,l=graphicsLayerIds.length;i<l;i++){
-                  if (this.map.getLayer(graphicsLayerIds[i]).declaredClass == "esri.layers.GraphicsLayer"||
-                      this.map.getLayer(graphicsLayerIds[i]).declaredClass == "MeasureGraphicsLayer") {
-                      this.map.getLayer(graphicsLayerIds[i]).clear();
-                  }
-              }
-              return;
-          }
-          //offSwitch启用无开关按钮，不切换按钮状态
-          if (node.config.offSwitch&&node.config.offSwitch=='true') {
-              if (this.openedId) {
-                  this._switchNodeToClose(this.openedId).then(lang.hitch(this, function() {
-                      this._closeDropMenu();
-                      this._showIconContentOffSwitch(node);
-                  }));
-              } else {
-                  this._showIconContentOffSwitch(node);
-              }
-              return;
-          }
-
-            //widget or group with 'openAll' open type
+          //widget or group with 'openAll' open type
           if (this.openedId && this.openedId === node.config.id) {
             this._switchNodeToClose(this.openedId);
             return;
@@ -1008,6 +1007,14 @@ define([
         }, node);
 
         this.own(on(node, 'click', lang.hitch(this, function() {
+            //应急需要先选择管线
+            /*if(node.config.id=='EmergencySupport'||node.config.id=='FunctionAnalysis'||node.config.id=='Inspection') {
+                var mapPipelineStatus=MapPipelineStatus.getInstance();
+                if(!mapPipelineStatus.CenterPoint.CenterStation){
+                    layer.msg(this.nls.emergencytip);
+                    return;
+                }
+            }*/
           this._closeDropMenu();
           if(this.openedId){
             this._switchNodeToClose(this.openedId).then(lang.hitch(this, function() {
@@ -1133,14 +1140,14 @@ define([
       _showMorePane: function() {
         var i, iconConfig, moreItems = [],
           //allIconConfigs = this.getAllConfigs();
-          allIconConfigs = [];
-        //无按钮小部件
-        var tmpArr = this.getAllConfigs();
-        for(i = 0; i < tmpArr.length; i++){
-            if(tmpArr[i].noBtnUI!="true"){
-                allIconConfigs.push(tmpArr[i]);
-            }
-        }
+            allIconConfigs = [];
+          //无按钮小部件
+          var tmpArr = this.getAllConfigs();
+          for(i = 0; i < tmpArr.length; i++){
+              if(tmpArr[i].noBtnUI!="true"){
+                  allIconConfigs.push(tmpArr[i]);
+              }
+          }
 
         for (i = this.headerIconCount; i < allIconConfigs.length; i++) {
           iconConfig = allIconConfigs[i];
@@ -1164,11 +1171,11 @@ define([
         this.morePane.startup();
 
         aspect.after(this.morePane, 'onNodeClicked', lang.hitch(this, function(node) {
-          //offSwitch启用无开关按钮，不调换顺序
-          if(node.config.offSwitch&&node.config.offSwitch=='true'){
-              this._onIconClick(node);
-              return;
-          }
+            //offSwitch启用无开关按钮，不调换顺序
+            if(node.config.offSwitch&&node.config.offSwitch=='true'){
+                this._onIconClick(node);
+                return;
+            }
 
           this._moveConfigToHeader(node.config);
           this._createIconNodes(html.getContentBox(this.domNode));
@@ -1181,23 +1188,26 @@ define([
 
       _moveConfigToHeader: function(config) {
         //var allIconConfigs = this.getAllConfigs();
-        //无按钮小部件
-        var allIconConfigs=[];
-        var tmpArr = this.getAllConfigs();
-        for(var i = 0; i < tmpArr.length; i++){
-            if(tmpArr[i].noBtnUI!="true"){
-                allIconConfigs.push(tmpArr[i]);
-            }
-        }
+          //无按钮小部件
+          var allIconConfigs=[];
+          var tmpArr = this.getAllConfigs();
+          for(var i = 0; i < tmpArr.length; i++){
+              if(tmpArr[i].noBtnUI!="true"){
+                  allIconConfigs.push(tmpArr[i]);
+              }
+          }
 
         var tempIndex = config.index;
         config.index = allIconConfigs[this.headerIconCount - 1].index;
         allIconConfigs[this.headerIconCount - 1].index = tempIndex;
       },
 
-      _onUrlClick:function(){
-          this.DGISWindow = window.open("http://47.92.7.213:8080/GIS3D/index.html","3DGISWindow");
-      },
+        _onUrlClick:function(){
+            var lang=CommonParams.getInstance().lang=="zh"?"zh-cn":CommonParams.getInstance().lang;
+            var dgisURL=configProject.DGIS+"?locale="+lang+"&unitEventid="+CommonParams.getInstance().unitEventid+
+                "&unitId="+CommonParams.getInstance().unitId+"&unitName="+CommonParams.getInstance().unitName;
+            this.DGISWindow = window.open(dgisURL,"3DGISWindow");
+        },
 
       _createCoverNode: function() {
         this.moreIconPaneCoverNode = html.create('div', {

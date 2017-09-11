@@ -29,6 +29,7 @@
 .jimu-widget-header-controller .jimu-subtitle{
   text-align: center;
   height: 100%;
+  width: 180px;
 }
 
 .jimu-widget-header-controller .links{
@@ -203,8 +204,8 @@
   position: absolute;
 /*  width: 08.92857142857143%;50/560
   height: 08.92857142857143%;*/
-  top: -3.125%;/*1/32*/
-  right: -3.125%;
+  top: -04.46428571428571%;/**/
+  right: -04.46428571428571%;
   border-radius: 50%;/*the context is the node itself*/
   background-color: #697a8c;
   cursor: pointer;
@@ -264,64 +265,65 @@
   background-color: rgba(72, 85, 102, 0.9);
 }
 
-
 .jimu-widget-header-controller .otherLogo{
-  height: 40px;
-  width: 25px;
-  background: url(./images/ohter.png) 5px 12px no-repeat
+    height: 40px;
+    width: 50px;
+    /*background: url(./images/ohter.png) 5px 12px no-repeat*/
+    background: url(./images/3D.png) 10px no-repeat;
+    cursor: pointer;
 }
 
 .jimu-widget-header-controller .otherPanel{
-  position: absolute;
-  /*top: 0px;*/
-  left: 150px;
-  display: none;
-  z-index: 120;
-  width: 60px;
-  height: 55px;
+    position: absolute;
+    /*top: 0px;*/
+    left: 185px;
+    display: none;
+    z-index: 120;
+    width: 60px;
+    height: 55px;
 }
 @media screen and (max-width:344px){
-  .jimu-widget-header-controller .otherPanel{
-    left: 36px;/*兼容移动端*/
-  }
+    .jimu-widget-header-controller .otherPanel{
+        left: 36px;/*兼容移动端*/
+    }
 }
 .jimu-widget-header-controller .otherContent{
-  /*position: absolute;
-  top: 50px;*/
-  border: 1px solid #E3E3E3;
-  box-shadow: 1px 1px 5px #d1d1d1;
-  -moz-box-shadow: 1px 1px 5px #d1d1d1;
-  -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    /*position: absolute;
+    top: 50px;*/
+    border: 1px solid #E3E3E3;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
 }
 .jimu-widget-header-controller .otherContent a {
-  text-decoration: none;
-  height: 25px;
-  line-height: 25px;
-  padding-left: 8px;
-  background-color: #fff;
-  -moz-user-select: none;
-  cursor: pointer;
-  text-align: left;
-  display: block;
-  color: #333;
-  margin: 0;
-  font-size: 12px;
+    text-decoration: none;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 8px;
+    background-color: #fff;
+    -moz-user-select: none;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    color: #333;
+    margin: 0;
+    font-size: 12px;
 }
 .jimu-widget-header-controller .otherContent a:hover {
-  background: #38F;
-  color: #FFF;
-  text-decoration: none;
+    background: #38F;
+    color: #FFF;
+    text-decoration: none;
 }
 .jimu-widget-header-controller .otherContent .menu-arrow {
-  position: absolute;
-  z-index: 2;
-  top: -10px;
-  left: 26px;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  border: 5px dashed transparent;
-  border-bottom: 5px solid #e3e3e3;
-  font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    left: 26px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed transparent;
+    border-bottom: 5px solid #e3e3e3;
+    font-size: 0;
 }

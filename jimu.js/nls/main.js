@@ -700,6 +700,19 @@ define({
           nowpage:"Page",
           nowitem:"Item"
       },
+      mappipeline: {
+          attrtypetip:"Query categories for the Location panel selected query categories",
+          pipeinfo:"PipeInfo",
+          attribute:"Attribute",
+          location:"Location",
+          lineLoopName:"LineLoopName",
+          markername:"Markername",
+          elevation:"Elevation",
+          depth:"Depth",
+          station:"Station",
+          querynoresult:"Query no result",
+          dlocation:"3DLocation"
+      },
     //we put these strings in here instead of in common because these strings are not translated.
     noEditPrivileges: "Your account does not have permission to create or modify data.",
     invalidConfiguration: "Widget is either not configured or the layers in the configuration are no longer in the map.  Please open the app in the builder mode and reconfigure the widget."

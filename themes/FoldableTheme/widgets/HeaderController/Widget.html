@@ -1,22 +1,23 @@
 <div>
   <!-- solve the bug of style delay loading -->
   <div class="header-section jimu-float-leading" data-dojo-attach-point="headerNode">
-    <img class="logo jimu-float-leading jimu-leading-margin1" data-dojo-attach-point="logoNode" data-dojo-attach-event="onload:_onLogoLoad">
+    <img class="logo jimu-float-leading jimu-leading-margin1" style="display: none" data-dojo-attach-point="logoNode" data-dojo-attach-event="onload:_onLogoLoad">
+      <div class="logo jimu-float-leading jimu-leading-margin1" style="margin-top:5px;width:34px;height:34px;background-image: url(images/app-logo.png);" data-dojo-attach-event="onload:_onLogoLoad"></div>
     <div class="titles jimu-float-leading jimu-leading-margin1" data-dojo-attach-point="titlesNode">
       <div class="jimu-title jimu-float-leading" data-dojo-attach-point="titleNode"></div>
-      <div class="jimu-float-leading">
-        <div id="OtherBtn" data-dojo-attach-point="OtherBtn" class="otherLogo"></div>
-        <div id="OtherPanel" data-dojo-attach-point="OtherPanel" class="otherPanel">
-          <div class="otherContent">
-            <div>
-              <a data-dojo-attach-point="threeDType" data-dojo-attach-event="onclick:_onUrlClick" target="_blank" data-tid="1000"> Web3D </a>
-            </div>
-            <span class="menu-arrow"> <em></em> </span>
-          </div>
-
+        <div class="jimu-title jimu-float-leading" data-dojo-attach-point="titleNode"></div>
+        <div class="jimu-subtitle jimu-float-leading jimu-leading-margin1" data-dojo-attach-point="subtitleNode"></div>
+        <div class="jimu-float-leading">
+            <div id="OtherBtn" data-dojo-attach-point="OtherBtn" title="GIS三维平台"  data-dojo-attach-event="onclick:_onUrlClick" class="otherLogo"></div>
+            <!--<div id="OtherPanel" data-dojo-attach-point="OtherPanel" class="otherPanel">
+                <div class="otherContent">
+                    <div>
+                        <a data-dojo-attach-point="threeDType" data-dojo-attach-event="onclick:_onUrlClick" target="_blank" data-tid="1000"> Web3D </a>
+                    </div>
+                    <span class="menu-arrow"> <em></em> </span>
+                </div>
+            </div>-->
         </div>
-      </div>
-      <div class="jimu-subtitle jimu-float-leading jimu-leading-margin5" data-dojo-attach-point="subtitleNode"></div>
     </div>
     <div class="links jimu-float-leading jimu-leading-margin25" data-dojo-attach-point="linksNode">
       <div class="dynamic-section jimu-float-leading" data-dojo-attach-point="dynamicLinksNode"></div>

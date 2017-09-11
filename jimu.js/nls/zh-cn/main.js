@@ -697,6 +697,19 @@ define({
         nowpage:"页",
         nowitem:"行"
     },
+    mappipeline: {
+        attrtypetip:"查询类别为定位面板所选查询类别",
+        pipeinfo:"基本信息",
+        attribute:"属性查询",
+        location:"定位最近桩",
+        lineLoopName:"管网名称",
+        markername:"桩名称",
+        elevation:"高程",
+        depth:"埋深",
+        station:"里程",
+        querynoresult:"查询到0个结果",
+        dlocation:"3D平台定位"
+    },
   "noEditPrivileges": "您的帐户不具备创建或修改数据的权限。",
   "invalidConfiguration": "微件尚未配置或配置中的图层已不在地图中。请在构建器模式下打开应用程序，然后重新配置微件。"
 });
